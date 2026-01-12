@@ -24,17 +24,16 @@ Transitioning from frontend to fullstack development with 2+ years of hands-on e
 JavaScript • PHP • Java • Python • SQL
 
 **Frontend:**  
-HTML • CSS • Bootstrap • Flexbox  
-*Currently learning:* React
+HTML • CSS • Tailwind • React  
 
 **Backend:**  
-Node.js • Express.js • REST APIs • PHP
+Node.js • Express.js • REST APIs •
 
 **Databases:**  
 MySQL • MySQL Workbench
 
 **Tools & Practices:**  
-Git • Agile methodologies • API design
+Git • Docker • Vite • Agile methodologies • API design
 
 ---
 
@@ -46,7 +45,7 @@ Backend system for managing clients and orders with MySQL database
 🦕 **[Draftosaurus Web App](https://github.com/Aura1Games/Proyecto-Poke-Saurus)**  
 Final high school project - Digital version of the board game (Team Leader)
 
-🪐 **[Astrology Guide Interface](https://github.com/Elian-zzz/astro-guia)**  
+🪐 **[Astrology Guide Interface](https://github.com/Elian-zzz/AstroProyect)**  
 Interactive web interface for astrology content
 
 ---
@@ -54,9 +53,9 @@ Interactive web interface for astrology content
 ## 📚 Currently Learning
 
 - Advanced JavaScript (Frontend & Backend) with Express.js
-- Building REST APIs with PHP
-- React for modern UI development
-- Software architecture and design patterns
+- Build React DOM web applications with vite
+- React - Tailwindcss components for modern UI development
+- cybersecurity implementación in proyects 
 
 ---
 
