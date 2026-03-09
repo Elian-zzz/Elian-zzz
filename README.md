@@ -1,15 +1,13 @@
 # Hi, I'm Elian Gutierrez 👋
 
-**Fullstack Web Developer** from Uruguay 🇺🇾
+**Fullstack Web Developer** and **SysAdmin / Network Infrastructure TI** from Uruguay 🇺🇾
 
-18-year-old developer passionate about building clean, scalable web applications. 
-Transitioning from frontend to fullstack development with 2+ years of hands-on experience.
-
+18-year-old developer passionate about building clean, scalable web applications. Development with 2+ years of hands-on experience focused on Web App and network infrastructure.
 ---
 
 ## 🚀 About Me
 
-- 🎓 Final year Computer Science student at [ISBO - UTU](https://isbo.utu.edu.uy/)
+- 🎓 Student of network and software technical degree at [ISBO - UTU](https://isbo.utu.edu.uy/)
 - 💻 2+ years of web development experience (frontend → fullstack)
 - 🔨 Building real-world projects to solve practical problems
 - 👥 Team leader of my high school capstone [project](https://github.com/Aura1Games/Proyecto-Poke-Saurus)
@@ -21,7 +19,7 @@ Transitioning from frontend to fullstack development with 2+ years of hands-on e
 ## 🛠️ Tech Stack
 
 **Languages:**  
-JavaScript • PHP • Java • Python • SQL
+JavaScript • PHP • Java • Python • SQL • BASH
 
 **Frontend:**  
 HTML • CSS • Tailwind • React  
@@ -33,11 +31,14 @@ Node.js • Express.js • REST APIs •
 MySQL • MySQL Workbench
 
 **Tools & Practices:**  
-Git • Docker • Vite • Agile methodologies • API design
+Git • Docker • Vite • Agile methodologies • API design • Hardering
 
 ---
 
 ## 💼 Current Projects
+
+👤 **[Customer, Order, Finance Management and Structured Message System](https://github.com/Elian-zzz/PachaMama-Project)**  
+Web App dashboard focused on CRUD of productos, orders, finance and other things that a business need in one place.
 
 👤 **[Customer & Order Management System](https://github.com/Elian-zzz/PatriciaElane)**  
 Backend system for managing clients and orders with MySQL database
