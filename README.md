@@ -1,82 +1,73 @@
-# Hi, I'm Elian Gutierrez 👋
+# React + TypeScript + Vite
 
-**Fullstack Web Developer** and **SysAdmin / Network Infrastructure TI** from Uruguay 🇺🇾
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-18-year-old developer passionate about building clean, scalable web applications. Development with 2+ years of hands-on experience focused on Web App and network infrastructure.
----
+Currently, two official plugins are available:
 
-## 🚀 About Me
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- 🎓 Student of network and software technical degree at [ISBO - UTU](https://isbo.utu.edu.uy/)
-- 💻 2+ years of web development experience (frontend → fullstack)
-- 🔨 Building real-world projects to solve practical problems
-- 👥 Team leader of my high school capstone [project](https://github.com/Aura1Games/Proyecto-Poke-Saurus)
-- 🧠 Fast learner with a continuous growth mindset
-- 🌱 Self-taught developer, always exploring new technologies
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-**Languages:**  
-JavaScript • PHP • Java • Python • SQL • BASH
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-**Frontend:**  
-HTML • CSS • Tailwind • React  
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-**Backend:**  
-Node.js • Express.js • REST APIs •
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-**Databases:**  
-MySQL • MySQL Workbench
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-**Tools & Practices:**  
-Git • Docker • Vite • Agile methodologies • API design • Hardering
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
----
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## 💼 Current Projects
-
-👤 **[Customer, Order, Finance Management and Structured Message System](https://github.com/Elian-zzz/PachaMama-Project)**  
-Web App dashboard focused on CRUD of productos, orders, finance and other things that a business need in one place.
-
-👤 **[Customer & Order Management System](https://github.com/Elian-zzz/PatriciaElane)**  
-Backend system for managing clients and orders with MySQL database
-
-🦕 **[Draftosaurus Web App](https://github.com/Aura1Games/Proyecto-Poke-Saurus)**  
-Final high school project - Digital version of the board game (Team Leader)
-
-🪐 **[Astrology Guide Interface](https://github.com/Elian-zzz/AstroProyect)**  
-Interactive web interface for astrology content
-
----
-
-## 📚 Currently Learning
-
-- Advanced JavaScript (Frontend & Backend) with Express.js
-- Build React DOM web applications with vite
-- React - Tailwindcss components for modern UI development
-- cybersecurity implementación in proyects 
-
----
-
-## 📊 GitHub Stats
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Elian-zzz&layout=compact&langs_count=8&theme=dark)](https://github.com/Elian-zzz)
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Elian-zzz&theme=dark&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Elian-zzz&show_icons=true&theme=dark)](https://github.com/Elian-zzz)
-
----
-
-## 🤝 Let's Connect
-
-I'm open to collaborations, internships, and junior developer opportunities!
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gutierrez-elian/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cielgutierrez11@gmail.com)
-
----
-
-⭐️ From [Elian-zzz](https://github.com/Elian-zzz)
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
