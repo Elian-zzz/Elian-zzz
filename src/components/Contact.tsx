@@ -1,102 +1,88 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+
+const GithubIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.8 0-1.5-.5-2.8-1.5-3.8.1-.4.7-1.8-.1-3.8-1-.3-3.4 1.5-3.4 1.5A11.6 11.6 0 0 0 12 4a11.6 11.6 0 0 0-3.4.9s-2.4-1.8-3.4-1.5c-.8 2-.2 3.4-.1 3.8A5.4 5.4 0 0 0 4 11c0 5.3 3 6.5 6 6.8a4.8 4.8 0 0 0-1 3.2v4"></path>
+  </svg>
+);
+
+const LinkedinIcon = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
 
 export default function Contact() {
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-    
-    setStatus('loading');
-    // Simulate API call to /api/contact for now (Vercel Serverless Function to be implemented)
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus('idle'), 5000);
-    }, 1500);
-  };
-
   return (
-    <footer className="w-full bg-[#0a0d16] border-t border-[var(--color-muted)]/10 py-24" id="contact">
-      <div className="max-w-3xl mx-auto px-6">
-        <motion.div 
+    <footer className="w-full bg-[#0a0d16] border-t border-slate-800/50 pt-24 pb-12" id="contact">
+      <div className="max-w-4xl mx-auto px-6 flex flex-col items-center">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-sans font-bold text-[var(--color-text)] mb-4">
-            Iniciemos un <span className="text-[var(--color-accent)]">Proyecto</span>
+          <h2 className="text-3xl md:text-4xl font-sans font-bold text-white mb-4">
+            Iniciemos un <span className="text-[#38BDF8]">Proyecto</span>
           </h2>
-          <p className="text-[var(--color-muted)] font-sans">
-            ¿Tienes un desafío técnico o buscas escalar tu arquitectura? Contáctame de forma segura.
+          <p className="text-[#94A3B8] font-sans max-w-xl mx-auto">
+            ¿Tienes un desafío técnico o buscas escalar tu arquitectura? Contáctame de forma directa para conversarlo.
           </p>
         </motion.div>
 
-        <motion.form 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          onSubmit={handleSubmit}
-          className="space-y-6 bg-[#111827] p-8 rounded-2xl border border-[var(--color-muted)]/20 shadow-xl"
+          className="mb-24"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-[var(--color-text)] font-sans">Nombre Completo</label>
-              <input 
-                id="name"
-                type="text" 
-                required
-                disabled={status === 'loading'}
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full bg-[var(--color-bg)] border border-[var(--color-muted)]/30 rounded-lg px-4 py-3 text-[var(--color-text)] font-sans focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all disabled:opacity-50"
-                placeholder="John Doe"
-              />
-            </div>
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-[var(--color-text)] font-sans">Correo Electrónico</label>
-              <input 
-                id="email"
-                type="email" 
-                required
-                disabled={status === 'loading'}
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full bg-[var(--color-bg)] border border-[var(--color-muted)]/30 rounded-lg px-4 py-3 text-[var(--color-text)] font-sans focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all disabled:opacity-50"
-                placeholder="john@empresa.com"
-              />
-            </div>
-          </div>
-          
-          <div className="space-y-2">
-            <label htmlFor="message" className="text-sm font-medium text-[var(--color-text)] font-sans">Mensaje Seguro</label>
-            <textarea 
-              id="message"
-              required
-              rows={4}
-              disabled={status === 'loading'}
-              value={formData.message}
-              onChange={(e) => setFormData({...formData, message: e.target.value})}
-              className="w-full bg-[var(--color-bg)] border border-[var(--color-muted)]/30 rounded-lg px-4 py-3 text-[var(--color-text)] font-sans focus:outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-all resize-none disabled:opacity-50"
-              placeholder="Detalla la arquitectura de tu problema..."
-            />
+          <a
+            href="https://wa.me/59896140030?text=Hola%20Elian,%20me%20gustaría%20iniciar%20un%20proyecto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 bg-[#25D366] hover:bg-[#1DA851] text-white font-bold font-sans px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-[#25D366]/20 hover:-translate-y-1"
+          >
+            <MessageSquare size={24} />
+            Escríbeme por WhatsApp
+          </a>
+        </motion.div>
+
+        {/* Footer Details */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="w-full flex flex-col md:flex-row items-center justify-between border-t border-slate-800/80 pt-8 text-[#94A3B8] gap-6"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-mono text-sm">
+
+            <a href="mailto:cielgutierrez11@gmail.com" className="hover:text-white transition-colors">cielgutierrez11@gmail.com</a>
           </div>
 
-          <button 
-            type="submit" 
-            disabled={status === 'loading' || status === 'success'}
-            className="w-full flex items-center justify-center gap-2 bg-[var(--color-accent)] text-[var(--color-bg)] font-bold font-sans py-4 rounded-lg hover:bg-opacity-90 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
-          >
-            {status === 'idle' && <><Send size={18} /> Enviar Petición</>}
-            {status === 'loading' && <><Loader2 size={18} className="animate-spin" /> Procesando...</>}
-            {status === 'success' && <><CheckCircle size={18} /> Enviado con Éxito</>}
-            {status === 'error' && <><AlertCircle size={18} /> Error en Servidor</>}
-          </button>
-        </motion.form>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://linkedin.com/in/gutierrez-elian"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#94A3B8] hover:text-[#38BDF8] transition-colors flex items-center gap-2 font-mono text-sm"
+            >
+              <LinkedinIcon size={18} />
+              <span className="hidden sm:inline">LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/Elian-zzz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#94A3B8] hover:text-white transition-colors flex items-center gap-2 font-mono text-sm"
+            >
+              <GithubIcon size={18} />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );

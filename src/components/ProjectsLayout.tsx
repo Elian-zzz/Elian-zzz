@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import projectsData from '../data/projects.json';
 import { Carousel } from './Carousel';
 
-export default function ProjectsLayout() {
+interface ProjectsLayoutProps {
+  onSelectProject?: (id: string) => void;
+}
+
+export default function ProjectsLayout({ onSelectProject }: ProjectsLayoutProps) {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto" id="projects">
       <div className="text-center mb-32">
@@ -51,11 +56,24 @@ export default function ProjectsLayout() {
                     </span>
                   ))}
                 </div>
+
+                {onSelectProject && (
+                  <div className="pt-8">
+                    <button 
+                      onClick={() => onSelectProject(project.id)}
+                      className="group flex items-center gap-4 px-8 py-4 border border-[var(--color-text)]/20 hover:border-[var(--color-accent)] text-[var(--color-text)] uppercase tracking-widest text-sm font-mono transition-all duration-300 hover:bg-[var(--color-accent)] hover:text-white hover:-translate-y-0.5 shadow-none hover:shadow-xl hover:shadow-[var(--color-accent)]/20"
+                    >
+                      Examinar Proyecto
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Image Carousel Side */}
               <div className="flex-1 w-full relative">
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-[var(--color-text)]/5 bg-white">
+                  {/* @ts-ignore Since images now match ProjectImage interface expected by Carousel */}
                   <Carousel images={project.images} />
                 </div>
                 {/* Decorative abstract shapes based on EarlyDog reference */}

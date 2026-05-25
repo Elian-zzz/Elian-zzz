@@ -2,8 +2,15 @@ import { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+export interface ProjectImage {
+  src: string;
+  title?: string;
+  synthesis?: string;
+  span?: string;
+}
+
 interface CarouselProps {
-  images: string[];
+  images: ProjectImage[];
 }
 
 export function Carousel({ images }: CarouselProps) {
@@ -20,11 +27,11 @@ export function Carousel({ images }: CarouselProps) {
   return (
     <div className="relative overflow-hidden w-full h-full rounded-t-xl group" ref={emblaRef}>
       <div className="flex h-full">
-        {images.map((src, index) => (
+        {images.map((image, index) => (
           <div className="flex-[0_0_100%] min-w-0 h-full relative" key={index}>
             <img 
-              src={src} 
-              alt={`Slide ${index}`} 
+              src={image.src} 
+              alt={image.title || `Slide ${index}`} 
               className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Subtle gradient overlay */}

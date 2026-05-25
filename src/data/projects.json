@@ -6,12 +6,42 @@
     "tech": ["E-commerce", "React", "Diseño UI/UX"],
     "results": "Se construyó una página web moderna de promoción y e-commerce de cursos con carga rápida y navegación intuitiva.",
     "images": [
-      "/proyectos/astro/1.png",
-      "/proyectos/astro/2.png",
-      "/proyectos/astro/3.png",
-      "/proyectos/astro/4.png",
-      "/proyectos/astro/5.png",
-      "/proyectos/astro/6.png"
+      {
+        "src": "/proyectos/astro/hero.png",
+        "title": "Página Principal",
+        "synthesis": "Atrae y conecta con los usuarios desde el primer segundo. Diseño enfocado en la exposición clara del negocio y su propuesta de valor.",
+        "span": "md:col-span-2 md:row-span-2"
+      },
+      {
+        "src": "/proyectos/astro/ejemplo_dashboard.png",
+        "title": "Dashboard Autogestionado",
+        "synthesis": "Control total del e-commerce. Visualización clara de métricas y autogestión sencilla de los contenidos.",
+        "span": "md:col-span-2 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/astro/Inicio_busqueda_cursos_de_astrología.png",
+        "title": "Búsqueda de Cursos",
+        "synthesis": "Facilita a los usuarios encontrar exactamente el curso de astrología que necesitan.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/astro/recorriendo_cursos.png",
+        "title": "Explorador de Cursos",
+        "synthesis": "Exposición visual atractiva de la oferta educativa para aumentar las conversiones.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/astro/ejemplo_detalles_de_un_curso.png",
+        "title": "Detalles del Curso",
+        "synthesis": "Información exhaustiva y estructurada de cada curso para eliminar dudas en el proceso de compra.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/astro/apartado_sobre_mi.png",
+        "title": "Sobre Mí",
+        "synthesis": "Sección dedicada a humanizar la marca y construir confianza directa con los estudiantes.",
+        "span": "md:col-span-1 md:row-span-1"
+      }
     ],
     "span": "md:col-span-2 md:row-span-2"
   },
@@ -22,12 +52,42 @@
     "tech": ["Dashboard", "Autogestión", "Logística"],
     "results": "Desarrollo de un sistema autogestor completo: dashboard de productos, stock, ofertas, seguimiento de pedidos, finanzas y módulo de tutoriales.",
     "images": [
-      "/proyectos/pachamama/1.png",
-      "/proyectos/pachamama/2.png",
-      "/proyectos/pachamama/3.png",
-      "/proyectos/pachamama/4.png",
-      "/proyectos/pachamama/5.png",
-      "/proyectos/pachamama/6.png"
+      {
+        "src": "/proyectos/pachamama/pantalla_principal_del_dashboard_con_pedidos_recientes_y_grafica_de_ingersos.png",
+        "title": "Dashboard Principal",
+        "synthesis": "Visualización inmediata del estado de los pedidos recientes y métricas financieras para un control total del negocio.",
+        "span": "md:col-span-2 md:row-span-2"
+      },
+      {
+        "src": "/proyectos/pachamama/apartado_de_pedidos.png",
+        "title": "Gestión de Pedidos",
+        "synthesis": "Registro y administración fluida de estados de entrega, asegurando que ninguna hortaliza se pierda en el camino.",
+        "span": "md:col-span-2 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/pachamama/apartado_de_clientes.png",
+        "title": "Gestión de Clientes",
+        "synthesis": "Base de datos autogestionable para mantener el registro detallado y el contacto con los compradores habituales.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/pachamama/Apartado_de_productos_con_stock_y_oferta.png",
+        "title": "Inventario y Ofertas",
+        "synthesis": "Mantenimiento ágil de productos, permitiendo actualizar precios y stock en tiempo real.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/pachamama/balance_financiero.png",
+        "title": "Balance Financiero",
+        "synthesis": "Contabilización clara y directa de los ingresos para la correcta salud económica del proyecto.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/pachamama/Apartado_de_manuales_de_uso.png",
+        "title": "Manuales de Uso",
+        "synthesis": "Documentación interna para facilitar el onboarding y el uso constante del sistema por los operadores.",
+        "span": "md:col-span-1 md:row-span-1"
+      }
     ],
     "span": "md:col-span-1 md:row-span-1"
   },
@@ -38,13 +98,48 @@
     "tech": ["CRUD", "Finanzas", "Automatización"],
     "results": "Implementación de un dashboard de autogestión de negocio con CRUD de clientes y pedidos, módulo de balance, finanzas y sistema de cobros.",
     "images": [
-      "/proyectos/patricia/1.png",
-      "/proyectos/patricia/2.png",
-      "/proyectos/patricia/3.png",
-      "/proyectos/patricia/4.png",
-      "/proyectos/patricia/5.png",
-      "/proyectos/patricia/6.png",
-      "/proyectos/patricia/7.png"
+      {
+        "src": "/proyectos/patricia/Pagina_principal.png",
+        "title": "Página Principal",
+        "synthesis": "Resumen ejecutivo del estado del negocio de costura y modistería, mostrando lo esencial al instante.",
+        "span": "md:col-span-2 md:row-span-2"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_de_balance.png",
+        "title": "Balance Contable",
+        "synthesis": "Visualización transparente de la contabilización general para un seguimiento financiero sin estrés.",
+        "span": "md:col-span-2 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_de_cobranza.png",
+        "title": "Gestión de Cobranzas",
+        "synthesis": "Registro y autogestión de pagos para garantizar la liquidez y evitar deudas de clientes.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_pedidos.png",
+        "title": "Registro de Pedidos",
+        "synthesis": "Control exhaustivo de cada encargo, sus medidas, requerimientos y estados de confección.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_clientes.png",
+        "title": "Cartera de Clientes",
+        "synthesis": "Mantenimiento del historial de clientes y sus preferencias habituales.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_gastos.png",
+        "title": "Control de Gastos",
+        "synthesis": "Registro detallado de insumos y materiales para mantener la rentabilidad a raya.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/patricia/Apartado_de_manuales_de_uso.png",
+        "title": "Soporte de Usuario",
+        "synthesis": "Guías accesibles en todo momento para la operatoria diaria del sistema.",
+        "span": "md:col-span-1 md:row-span-1"
+      }
     ],
     "span": "md:col-span-1 md:row-span-1"
   },
@@ -55,8 +150,24 @@
     "tech": ["Mantenimiento", "Redes", "Soporte 24/7"],
     "results": "Optimización integral del hardware, configuración de redes seguras y respuesta técnica inmediata para garantizar cero tiempo de inactividad comercial.",
     "images": [
-      "/images/security.png",
-      "/images/dashboard.png"
+      {
+        "src": "/proyectos/soporte/2.jpg",
+        "title": "Mantenimiento Preventivo",
+        "synthesis": "Limpieza y optimización térmica de hardware para prevenir fallas catastróficas.",
+        "span": "md:col-span-2 md:row-span-2"
+      },
+      {
+        "src": "/proyectos/soporte/1.jpg",
+        "title": "Reparación Electrónica",
+        "synthesis": "Diagnóstico y soldadura de componentes a nivel micro-electrónico.",
+        "span": "md:col-span-1 md:row-span-1"
+      },
+      {
+        "src": "/proyectos/soporte/3.jpg",
+        "title": "Análisis de Circuitos",
+        "synthesis": "Revisión profunda de circuitos integrados para garantizar estabilidad y rendimiento prolongado.",
+        "span": "md:col-span-1 md:row-span-1"
+      }
     ],
     "span": "md:col-span-2 md:row-span-1"
   }
