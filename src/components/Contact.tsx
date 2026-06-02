@@ -17,73 +17,70 @@ const LinkedinIcon = ({ size = 24, className = "" }) => (
 
 export default function Contact() {
   return (
-    <footer className="w-full bg-[#0a0d16] border-t border-slate-800/50 pt-24 pb-12" id="contact">
-      <div className="max-w-4xl mx-auto px-6 flex flex-col items-center">
+    <div id="contact" className="w-full flex flex-col items-center pt-24 relative">
+      
+      {/* Floating Overlapping Card */}
+      <div className="w-full max-w-4xl px-6 relative z-10 -mb-24">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="bg-[#0369A1] rounded-[2.5rem] p-10 md:p-16 shadow-2xl flex flex-col items-center text-center border border-[#0284C7]"
         >
-          <h2 className="text-3xl md:text-4xl font-sans font-bold text-white mb-4">
-            Iniciemos un <span className="text-[#38BDF8]">Proyecto</span>
+          <h2 className="text-3xl md:text-5xl font-sans font-black text-white mb-6 tracking-tight">
+            Iniciemos un <span className="text-[#BAE6FD]">Proyecto</span>
           </h2>
-          <p className="text-[#94A3B8] font-sans max-w-xl mx-auto">
+          
+          <p className="text-sky-100 font-sans max-w-xl mx-auto mb-10 text-lg">
             ¿Tienes un desafío técnico o buscas escalar tu arquitectura? Contáctame de forma directa para conversarlo.
           </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-24"
-        >
+          
           <a
             href="https://wa.me/59896140030?text=Hola%20Elian,%20me%20gustaría%20iniciar%20un%20proyecto"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-[#25D366] hover:bg-[#1DA851] text-white font-bold font-sans px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-[#25D366]/20 hover:-translate-y-1"
+            className="flex items-center gap-3 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold font-sans px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-[#16A34A]/30 hover:-translate-y-1"
           >
             <MessageSquare size={24} />
             Escríbeme por WhatsApp
           </a>
         </motion.div>
-
-        {/* Footer Details */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="w-full flex flex-col md:flex-row items-center justify-between border-t border-slate-800/80 pt-8 text-[#94A3B8] gap-6"
-        >
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-mono text-sm">
-
-            <a href="mailto:cielgutierrez11@gmail.com" className="hover:text-white transition-colors">cielgutierrez11@gmail.com</a>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a
-              href="https://linkedin.com/in/gutierrez-elian"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#94A3B8] hover:text-[#38BDF8] transition-colors flex items-center gap-2 font-mono text-sm"
-            >
-              <LinkedinIcon size={18} />
-              <span className="hidden sm:inline">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/Elian-zzz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#94A3B8] hover:text-white transition-colors flex items-center gap-2 font-mono text-sm"
-            >
-              <GithubIcon size={18} />
-              <span className="hidden sm:inline">GitHub</span>
-            </a>
-          </div>
-        </motion.div>
       </div>
-    </footer>
+
+      {/* Dark Footer Background */}
+      <footer className="w-full bg-[#0a0d16] pt-40 pb-12">
+        <div className="max-w-4xl mx-auto px-6">
+          
+          {/* Footer Details */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between border-t border-slate-800/80 pt-8 text-[#94A3B8] gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-mono text-sm">
+              <a href="mailto:cielgutierrez11@gmail.com" className="hover:text-white transition-colors">cielgutierrez11@gmail.com</a>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <a
+                href="https://linkedin.com/in/gutierrez-elian"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#94A3B8] hover:text-[#0369A1] transition-colors flex items-center gap-2 font-mono text-sm"
+              >
+                <LinkedinIcon size={18} />
+                <span className="hidden sm:inline">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/Elian-zzz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#94A3B8] hover:text-white transition-colors flex items-center gap-2 font-mono text-sm"
+              >
+                <GithubIcon size={18} />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    </div>
   );
 }

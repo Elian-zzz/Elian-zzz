@@ -25,13 +25,13 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
   }, [project.id]);
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-[#F3F4F6] selection:bg-[#38BDF8]/30 selection:text-[#38BDF8] font-sans antialiased">
+    <div className="min-h-screen bg-[#0B0F19] text-[#F3F4F6] selection:bg-[#0369A1]/30 selection:text-[#0369A1] font-sans antialiased">
       
       {/* Navbar/Back Button */}
       <nav className="w-full py-8 px-6 md:px-12 flex items-center justify-between max-w-[1600px] mx-auto relative z-40">
         <button 
           onClick={onBack}
-          className="flex items-center gap-4 text-[#94A3B8] hover:text-[#38BDF8] transition-all duration-300 group"
+          className="flex items-center gap-4 text-[#94A3B8] hover:text-[#0369A1] transition-all duration-300 group"
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" strokeWidth={1.5} />
           <span className="font-mono text-sm uppercase tracking-widest mt-1">Volver al inicio</span>
@@ -68,7 +68,7 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
             className="flex flex-wrap gap-4 mt-6 md:mt-10"
           >
             {project.tech.map(t => (
-              <span key={t} className="px-5 py-2 border border-slate-700/50 bg-slate-900/40 font-mono text-xs uppercase tracking-widest text-[#38BDF8] rounded-sm">
+              <span key={t} className="px-5 py-2 border border-slate-700/50 bg-slate-900/40 font-mono text-xs uppercase tracking-widest text-[#0369A1] rounded-sm">
                 {t}
               </span>
             ))}
@@ -89,7 +89,7 @@ export default function ProjectDetails({ project, onBack }: ProjectDetailsProps)
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   onClick={() => setSelectedImage(img)}
-                  className={`group relative flex flex-col rounded-2xl overflow-hidden border border-slate-800/40 bg-[#0B0F19] transition-all duration-500 hover:-translate-y-1 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-[#38BDF8]/5 cursor-pointer ${spanClass}`}
+                  className={`group relative flex flex-col rounded-2xl overflow-hidden border border-slate-800/40 bg-[#0B0F19] transition-all duration-500 hover:-translate-y-1 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-[#0369A1]/5 cursor-pointer ${spanClass}`}
                 >
                   <div className="relative w-full flex-1 overflow-hidden bg-[#0F1523]">
                     <img 

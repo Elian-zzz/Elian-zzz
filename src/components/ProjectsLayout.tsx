@@ -61,7 +61,7 @@ export default function ProjectsLayout({ onSelectProject }: ProjectsLayoutProps)
                   <div className="pt-8">
                     <button 
                       onClick={() => onSelectProject(project.id)}
-                      className="group flex items-center gap-4 px-8 py-4 border border-[var(--color-text)]/20 hover:border-[var(--color-accent)] text-[var(--color-text)] uppercase tracking-widest text-sm font-mono transition-all duration-300 hover:bg-[var(--color-accent)] hover:text-white hover:-translate-y-0.5 shadow-none hover:shadow-xl hover:shadow-[var(--color-accent)]/20"
+                      className="group flex items-center gap-4 px-8 py-4 bg-[var(--color-accent)] text-white hover:bg-blue-700 uppercase tracking-widest text-sm font-mono rounded-lg transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-[var(--color-accent)]/30 hover:shadow-xl hover:shadow-[var(--color-accent)]/50"
                     >
                       Examinar Proyecto
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

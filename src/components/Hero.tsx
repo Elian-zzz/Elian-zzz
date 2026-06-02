@@ -1,9 +1,9 @@
-import { Globe } from 'lucide-react';
+import { Globe, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[calc(100vh-88px)] flex flex-col justify-center py-12 md:py-0 overflow-hidden bg-black">
+    <section className="relative w-full min-h-screen flex flex-col justify-center pt-32 pb-12 overflow-hidden bg-black">
       {/* Background Collage */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-3 z-0">
         <div className="relative">
@@ -31,7 +31,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <Globe 
-              className="w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] text-[#1389c9] drop-shadow-[0_0_20px_rgba(19,137,201,0.6)]" 
+              className="w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] text-[#0369A1] drop-shadow-[0_0_20px_rgba(3,105,161,0.6)]" 
               strokeWidth={2.5} 
             /> 
           </motion.div>
@@ -92,16 +92,16 @@ export default function Hero() {
                </h2>
              </motion.div>
 
-             <motion.div
+             <motion.a
+               href="#contact"
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.3 }}
-               className="inline-block bg-[#acc6f2] px-6 py-2 sm:px-8 sm:py-3 shadow-2xl relative mt-4 md:mt-0"
+               className="group flex items-center justify-center gap-4 px-8 py-5 sm:px-10 sm:py-6 bg-[var(--color-accent)] text-white hover:bg-blue-700 uppercase tracking-widest text-base sm:text-lg md:text-xl font-mono rounded-lg transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-[var(--color-accent)]/30 hover:shadow-xl hover:shadow-[var(--color-accent)]/50 mt-4 md:mt-8 cursor-pointer"
              >
-               <p className="text-xl sm:text-2xl md:text-3xl text-[#1e3aa8] font-serif font-bold">
-                 ¿Que esperas para unirte?
-               </p>
-             </motion.div>
+               ¿Que esperas para unirte?
+               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+             </motion.a>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: '100%' }}
         animate={{ opacity: 1, y: '-50%' }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="hidden md:block absolute right-[8%] top-1/2 w-20 lg:w-28 h-[50%] lg:h-[60%] bg-[#25439c] z-10 shadow-2xl"
+        className="hidden md:block absolute right-[8%] top-1/2 w-20 lg:w-28 h-[50%] lg:h-[60%] bg-[#3B82F6] z-10 shadow-2xl"
       />
     </section>
   );

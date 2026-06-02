@@ -3,7 +3,7 @@
 @theme {
   --color-bg: #F9F9F8;
   --color-text: #111827;
-  --color-accent: #2563EB;
+  --color-accent: #0369A1;
   --color-muted: #6B7280;
 
   --font-sans: "Geist Sans", "Inter", sans-serif;
@@ -12,6 +12,14 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
   body {
     background-color: var(--color-bg);
     color: var(--color-text);

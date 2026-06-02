@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg)] antialiased selection:bg-[var(--color-accent)] selection:text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#D1D5DB] to-[var(--color-bg)] overflow-x-hidden w-full max-w-[100vw] antialiased selection:bg-[var(--color-accent)] selection:text-white">
       <Navbar />
       <Hero />
       <Marquee />

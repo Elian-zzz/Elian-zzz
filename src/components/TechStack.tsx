@@ -35,7 +35,7 @@ export default function TechStack() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="p-6 rounded-xl border border-[var(--color-muted)]/20 bg-[#111827] hover:border-[var(--color-accent)]/50 transition-colors group"
+            className="p-6 rounded-xl border border-[var(--color-muted)]/20 bg-white/40 backdrop-blur-md hover:border-[var(--color-accent)]/50 transition-colors group shadow-sm hover:shadow-md"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 rounded-lg bg-[var(--color-bg)] text-[var(--color-accent)] border border-[var(--color-muted)]/10 group-hover:scale-110 transition-transform">
@@ -45,7 +45,7 @@ export default function TechStack() {
             </div>
             <ul className="space-y-2">
               {tech.skills.map(skill => (
-                <li key={skill} className="text-[var(--color-muted)] font-sans text-sm flex items-center gap-2">
+                <li key={skill} className="text-gray-800 font-sans text-sm flex items-center gap-2 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]/50" />
                   {skill}
                 </li>

@@ -34,9 +34,9 @@ export default function About() {
             { icon: <Target />, title: 'Performance', desc: 'Optimización extrema para Lighthouse.' },
             { icon: <Lock />, title: 'Seguridad', desc: 'Prevención de vulnerabilidades OWASP.' },
           ].map((item, i) => (
-            <div key={item.title} className={`p-6 rounded-xl border border-[var(--color-muted)]/20 bg-[#111827] ${i === 2 ? 'sm:col-span-2' : ''}`}>
+            <div key={item.title} className={`p-6 rounded-xl border border-[var(--color-muted)]/20 bg-white/40 backdrop-blur-md shadow-sm hover:shadow-md hover:border-[var(--color-accent)]/50 transition-all ${i === 2 ? 'sm:col-span-2' : ''}`}>
               <div className="text-[var(--color-accent)] mb-4">{item.icon}</div>
-              <h3 className="text-lg font-bold text-[var(--color-text)] mb-2">{item.title}</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
               <p className="text-sm text-[var(--color-muted)]">{item.desc}</p>
             </div>
           ))}

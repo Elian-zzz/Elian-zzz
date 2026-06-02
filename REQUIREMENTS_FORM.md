@@ -59,5 +59,18 @@ Por favor, completa los campos vacíos (`[ ]`) o responde a las preguntas direct
 } ]`
 
 ---
+## 6. FIXES DE ESTILOS Y ACCESIBILIDAD (Agregados)
+- Fondo modificado a un degradado de gris claro a blanco para reducir fatiga visual y mejorar cohesión.
+- Eliminado scroll horizontal forzando el ancho de la página y ocultando el desborde en el eje X.
+- Mejorado contraste en los botones principales (ahora con fondo sólido en el color de acento).
+- Call-To-Action (CTA) interactivo añadido en la Hero redireccionando a la sección de contacto.
+- Mejorada la legibilidad de las cartas "Core Architecture" usando fondos claros translúcidos y texto oscuro.
+- Navbar optimizada para móviles con menú hamburguesa, un `<aside>` lateral animado a 350ms y autoplegado al navegar.
+
+## 7. FIXES ADICIONALES (Fase 2)
+- Header fijado en toda la pantalla (`fixed top-0`).
+- Aplicado el estilo Glassmorphism (fondo claro translúcido con desenfoque) a todas las tarjetas de la sección "Filosofía" para mantener cohesión.
+- Sección de contacto rediseñada como una tarjeta cyan brillante y destacada, superpuesta flotando en la unión del fondo claro y el footer oscuro.
+
 **Instrucción de Acción:**
 Completa los corchetes `[ ]` con tus definiciones y avísame para consolidarlo en nuestra arquitectura y dar el primer paso técnico de inicialización.
