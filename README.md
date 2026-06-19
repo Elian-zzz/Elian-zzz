@@ -2,13 +2,13 @@
 
 **Fullstack Web Developer** and **SysAdmin / Network Infrastructure TI** from Uruguay 🇺🇾
 
-18-year-old developer passionate about building clean, scalable web applications. Development with 2+ years of hands-on experience focused on Web App and network infrastructure.
+19-year-old developer passionate about building clean, scalable web applications. Development with 2+ years of hands-on experience focused on Web App and network infrastructure.
 ---
 
 ## 🚀 About Me
 
 - 🎓 Student of network and software technical degree at [ISBO - UTU](https://isbo.utu.edu.uy/)
-- 💻 2+ years of web development experience (frontend → fullstack)
+- 💻 2+ years of web development experience (fullstack)
 - 🔨 Building real-world projects to solve practical problems
 - 👥 Team leader of my high school capstone [project](https://github.com/Aura1Games/Proyecto-Poke-Saurus)
 - 🧠 Fast learner with a continuous growth mindset
